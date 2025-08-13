@@ -12,6 +12,8 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: "dist", // explicit: output goes to dist/
+    emptyOutDir: true, // clean dist before each build
     rollupOptions: {
       // Exclude from build: any file in __tests__ dirs OR matching *setupTests*
       external: [/\/__tests__\//, /setupTests\.(t|j)sx?$/],
